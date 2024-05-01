@@ -22,5 +22,5 @@ def text_to_image_api(form: TextToImageForm, with_mime: bool = False):
 ### Run
 
 ```
-uvicorn main:app --host 0.0.0.0 --port 8081
+uvicorn main:app --host 0.0.0.0 --port 8080
 ```
