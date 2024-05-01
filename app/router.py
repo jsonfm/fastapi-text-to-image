@@ -4,7 +4,7 @@ from fastapi.responses import HTMLResponse
 from app.utils import text_to_image
 
 
-router = APIRouter(prefix="", tags=["API"])
+router = APIRouter(prefix="/", tags=["API"])
 
 
 html = f"""
@@ -29,7 +29,7 @@ html = f"""
 
 
 @router.get("/")
-async def root():
+def root():
     return HTMLResponse(html)
 
 
