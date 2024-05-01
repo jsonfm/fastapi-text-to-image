@@ -2,6 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 import io
 from typing import Union, Tuple
+from app.constants import FONTS_PATH
 
 
 def image_to_base64(image: Image.Image) -> str:
@@ -20,7 +21,7 @@ def text_to_image(
     image_size: Tuple[int, int] = (400, 300),
     as_base64: bool = True,
 ) -> Image.Image:
-    font = ImageFont.truetype("./Roboto-Medium.ttf", size=font_size)
+    font = ImageFont.truetype(FONTS_PATH, size=font_size)
     image_width, image_height = image_size
 
     image = Image.new("RGBA", (image_width, image_height), bg_color)
