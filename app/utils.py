@@ -31,7 +31,7 @@ def text_to_image(
     #
     x = (image_width - text_width - offset_x) // 2
     y = (image_height - text_height - offset_y) // 2
-    print("offset: ", (offset_x, offset_y))
+
     draw.text((x, y), message, font=font, fill=font_color)
 
     if as_base64:
